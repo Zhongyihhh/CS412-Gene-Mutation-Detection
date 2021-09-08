@@ -20,10 +20,10 @@ Step 3: Evaluate the performance of developed algorithm.
 Gibbs sampling algorithm was implemented to tackle the challenge. To avoid local optimum and make results approach the global optimum, phase shifting was used. 
 
 # Code Description
-"run_this.py": main function.
-"Step1_2.py": functions for creating the datasets.
-"Step2_Function.py": functions for implementing Gibbs sampling algorithm and phase shifting.
-"Step3_Function.py": functions for evaluation.
+- "run_this.py": main function.
+- "Step1_2.py": functions for creating the datasets.
+- "Step2_Function.py": functions for implementing Gibbs sampling algorithm and phase shifting.
+- "Step3_Function.py": functions for evaluation.
 
 # Performance
 ![alt text](https://github.com/Zhongyihhh/CS412-Gene-Mutation-Detection/blob/main/image/Screen%20Shot%202021-09-08%20at%2018.32.21.png)
