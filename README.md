@@ -3,7 +3,7 @@
 # Project Description
 A ‘motif’ is a pattern in a sequence. For example, in DNA sequences (which are sequences over the alphabet {A,C,G,T}), an example of a motif is the pattern ‘TCACGTG’. A slightly more complex motif is the pattern TC[A/C]CGTG, which represents ‘either TCACGTG or TCCCGTG’. An occurrence of a motif in a given DNA sequence is called a ‘site’. When gene mutation or human planted gene sequences exist, there might impact the local motif table, so that it is possible to detect the planted gene locations. The task of this project is to detect the locations and sequences of planted gene sequences.
 
-In this project, effects of three variables were evaluated:
+In this project, effects of three parameters on the developed algorithm need to be evaluated:
 - Information Content per Column (ICPC) = 1, 1.5, and 2
 - Motif Length (ML) = 6, 7, and 8
 - Sequence Count (SC) = 5, 10, and 20
@@ -26,4 +26,5 @@ Gibbs sampling algorithm was implemented to tackle the challenge. To avoid local
 - "Step3_Function.py": functions for evaluation.
 
 # Performance
+Detailed information can be found in the project report, "Project_Report.pdf", in the repo.
 ![alt text](https://github.com/Zhongyihhh/CS412-Gene-Mutation-Detection/blob/main/image/Screen%20Shot%202021-09-08%20at%2018.32.21.png)
