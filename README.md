@@ -26,5 +26,5 @@ Gibbs sampling algorithm was implemented to tackle the challenge. To avoid local
 - "Step3_Function.py": functions for evaluation.
 
 # Performance
-Detailed information can be found in the project report, "Project_Report.pdf", in the repo.
+Detailed information can be found in the project report, "Project Report.pdf", in the repo.
 ![alt text](https://github.com/Zhongyihhh/CS412-Gene-Mutation-Detection/blob/main/image/Screen%20Shot%202021-09-08%20at%2018.32.21.png)
