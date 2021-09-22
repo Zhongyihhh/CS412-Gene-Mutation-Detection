@@ -19,6 +19,10 @@ Step 3: Evaluate the performance of developed algorithm.
 # Algorithm
 Gibbs sampling algorithm was implemented to tackle the challenge. To avoid local optimum and make results approach the global optimum, phase shifting was used. 
 
+- Step 1: Choose random starting points of motifs for each sequence and record the starting points in a list named as “pst”.
+![image](https://user-images.githubusercontent.com/47155713/134284150-97da509f-09db-4107-ba7e-3a35d6e2e0eb.png)
+
+- 
 # Code Description
 - "run_this.py": main function.
 - "Step1_2.py": functions for creating the datasets.
