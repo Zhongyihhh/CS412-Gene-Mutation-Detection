@@ -19,10 +19,31 @@ Step 3: Evaluate the performance of developed algorithm.
 # Algorithm
 Gibbs sampling algorithm was implemented to tackle the challenge. To avoid local optimum and make results approach the global optimum, phase shifting was used. 
 
-- Step 1: Choose random starting points of motifs for each sequence and record the starting points in a list named as “pst”.
-![image](https://user-images.githubusercontent.com/47155713/134284150-97da509f-09db-4107-ba7e-3a35d6e2e0eb.png)
+- Step 1: Choose random starting points of motifs for each sequence and record the starting points in a list named as “pst”
+![image](https://user-images.githubusercontent.com/47155713/134284192-99c12e2f-a521-438b-9eab-22832e87a13b.png)
+- Step 2: Choose random sequence from a set (for example sequence 1)  to search the most possible motif
+![image](https://user-images.githubusercontent.com/47155713/134284217-54f12572-3500-4da6-9bfc-a864f58b920a.png)
+- Step 3: Formulate position weight matrix (PWM) of width of ML by excluding chosen sequence in step 2
+- Step 4: Compute the weights for each location in the sequence chosen in Step 2 using Ax = Qx/Px and normalize weights as the probability for corresponding locations
+![image](https://user-images.githubusercontent.com/47155713/134284329-7f089e1b-f86a-4838-8e9a-cb1d4842010c.png)
+- Step 5: Randomly sample a new location of starting point for the selected sequence in Step 2 based on the normalized weight and renew the list “pst”.
+![image](https://user-images.githubusercontent.com/47155713/134284371-f625a99d-3f76-4d80-85cc-32be8669a351.png)
+- Step 6: Phase Shifts: after 40 iterations, the location of starting points for each sequence will be moved a distance of m to left and right, in which m ranges from 1 to 5. Used to jump out of local optimum
+![image](https://user-images.githubusercontent.com/47155713/134284398-4d57c21f-6e40-4ccc-8de3-e3cbf93953a4.png)
+- Step 7 : Repeat Step1~6 to until convergence:
+    Convergence Criteria: 
+      1. The SC latest results are the same.
+      2. Number of iteration < 20000.
+      3. Number of iteration ≥ 4000 + added iteration
+        Added iteration depends on the IC of result: 1000*(2*ML-Current IC)^2 
+        low IC tends to have more iterations
+- Step 8: Do one more phase shift comparison after iterations. Avoid the situation, which is induced by background DNA noise, that the predicted location overlapping with the actual location at the same error
+![image](https://user-images.githubusercontent.com/47155713/134284600-51586104-cfe2-4da1-9e63-5849aeda3412.png)
 
-- 
+
+
+
+
 # Code Description
 - "run_this.py": main function.
 - "Step1_2.py": functions for creating the datasets.
